@@ -2,7 +2,7 @@ import Header from "../Header/Header"
 import { Briefcase, Mail } from "lucide-react"
 
 
-function Section1(){
+function Presentation(){
     return(
         <div className="bg-bg1 bg-cover bg-center flex justify-center items-center h-screen w-full">
             <div className="w-full h-full bg-black bg-opacity-75">
@@ -31,4 +31,4 @@ function Section1(){
     
 }
 
-export default Section1
+export default Presentation

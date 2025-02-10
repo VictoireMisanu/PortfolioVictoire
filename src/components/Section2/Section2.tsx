@@ -2,22 +2,22 @@ import { User, Wrench } from "lucide-react"
 
 export default function AboutSection() {
   const technicalSkills = [
-    { name: "React", category: "frontend" },
-    { name: "TypeScript", category: "frontend" },
-    { name: "Node.js", category: "backend" },
-    { name: "JavaScript", category: "frontend" },
-    { name: "HTML/CSS", category: "frontend" },
-    { name: "Git", category: "tools" },
-    { name: "SQL", category: "backend" },
-    { name: "MongoDB", category: "backend" },
-    { name: "Firebase", category: "backend" },
-    { name: "Adonis.js", category: "backend" },
-    { name: "React Native", category: "mobile" },
-    { name: "Tailwind CSS", category: "frontend" },
-    { name: "Bootstrap", category: "frontend" },
-    { name: "Figma", category: "design" },
-    { name: "Edge", category: "tools" },
-    { name: "Photoshop", category: "design" },
+    { name: "Autonomy" },
+    { name: "Creativity"},
+    { name: "Pragmatism" },
+    { name: "Innovation"},
+    { name: "Self-control"},
+    { name: "Communication" },
+    { name: "Teamwork"},
+    { name: "Problem solving"},
+    { name: "Adaptability"},
+    { name: "Crital thinking"},
+    { name: "Time management"},
+    { name: "Empathy"},
+    { name: "Leadership"},
+    { name: "Negociation"},
+    { name: "Conflict resolution"},
+    { name: "Emotional intelligence"},
   ]
 
   return (
@@ -50,9 +50,9 @@ export default function AboutSection() {
                 <div className="bg-gray-900 p-1.5 rounded-full">
                     <Wrench className="w-5 h-5 text-white" />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900">Technical skills</h2>
+                <h2 className="text-2xl font-bold text-gray-900">Soft skills</h2>
             </div>
-          <div className="flex flex-wrap gap-2 mt-10">
+          <div className="flex flex-wrap gap-2 ">
             {technicalSkills.map((skill) => (
               <span
                 key={skill.name}
