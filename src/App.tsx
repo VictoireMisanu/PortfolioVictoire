@@ -1,9 +1,6 @@
 // import { useState } from 'react'
 import Section1 from './components/Section1/Section1'
 import Section2 from './components/Section2/Section2'
-import Section2Text from './components/Section2/text'
-import Card from './components/Section2/Card'
-import Video from './components/Section2/Video'
 import Section3 from './components/Section3/Section3'
 import Section3Text from './components/Section3/text'
 import LogoList from './components/Section3/logoList'
@@ -22,17 +19,8 @@ function App() {
   return (
     <>
     <Section1/>
-        <Section2>
-            <Section2Text/>
-            <div className='w-full flex flex-col-reverse lg:flex-col justify-center items-center'>
-              <Card/>
-              <Video/>
-            </div>
-        </Section2>
-        <Section3>
-            <Section3Text/>
-            <LogoList/>
-        </Section3>
+    <Section2/>
+    <Section3/>
         <Section4>
           <Section4Text className='text-4xl sm:lg:px-48 font-sans text-slate-600 text-center'>Testimonials</Section4Text>
           <Logo src='ibm.png' className='w-20 lg:w-32 pt-16'/>
