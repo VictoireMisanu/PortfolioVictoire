@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 
-
 export default function SkillsSection() {
   const softwareSkills = [
     { name: "HTML/CSS", level: 90 },
@@ -24,11 +23,11 @@ export default function SkillsSection() {
       description: "Development of an e-commerce web application using React and Adonis.",
     },
     {
-        title: "FarmProd Mock-up",
-        company: "Freelance",
-        period: "Dec. 2024 - Present",
-        description: "Development of a mockup using Figma",
-      },
+      title: "FarmProd Mock-up",
+      company: "Freelance",
+      period: "Dec. 2024 - Present",
+      description: "Development of a mockup using Figma",
+    },
     {
       title: "Les journées informatiques",
       company: "Freelance",
@@ -43,7 +42,7 @@ export default function SkillsSection() {
     },
   ]
 
-  const quickSkills = ["VSCode", "PostgreSQL", "SQLServer","WampServer", "Git", "Draw.io", "Figma", "Canva"]
+  const quickSkills = ["VSCode", "PostgreSQL", "SQLServer", "WampServer", "Git", "Draw.io", "Figma", "Canva"]
 
   const languages = [
     { name: "English", level: 80 },
@@ -52,11 +51,11 @@ export default function SkillsSection() {
   ]
 
   return (
-    <section id="resume" className="min-h-screen bg-gray-900 text-white px-6 py-12">
-      <div className="max-w-7xl mx-auto flex flex-row gap-16">
+    <section id="resume" className="min-h-screen bg-gray-900 text-white px-4 sm:px-6 py-8 sm:py-12">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-16">
         {/* Software Skills Column */}
-        <div id="software" className="space-y-6 w-4/12">
-          <h2 className="text-xl font-bold mb-4">SOFTWARE SKILLS</h2>
+        <div id="software" className="space-y-6 w-full lg:w-4/12">
+          <h2 className="text-lg sm:text-xl font-bold mb-4">SOFTWARE SKILLS</h2>
           <div className="space-y-4">
             {softwareSkills.map((skill) => (
               <div key={skill.name} className="space-y-2">
@@ -78,7 +77,7 @@ export default function SkillsSection() {
 
           {/* Languages Section */}
           <div id="language" className="mt-8">
-            <h2 className="text-xl font-bold mb-4">LANGUAGES</h2>
+            <h2 className="text-lg sm:text-xl font-bold mb-4">LANGUAGES</h2>
             <div className="space-y-4">
               {languages.map((language) => (
                 <div key={language.name} className="space-y-2">
@@ -101,8 +100,8 @@ export default function SkillsSection() {
         </div>
 
         {/* Experience Column */}
-        <div id="experience w-4/12">
-          <h2 className="text-xl font-bold mb-6">EXPERIENCE</h2>
+        <div className="w-full lg:w-4/12">
+          <h2 className="text-lg sm:text-xl font-bold mb-6">EXPERIENCE</h2>
           <div className="space-y-8">
             {experiences.map((exp, index) => (
               <div key={index} className="relative pl-8 pb-8">
@@ -124,13 +123,15 @@ export default function SkillsSection() {
         </div>
 
         {/* Tools Column */}
-        <div id="tools w-4/12">
-          <h2 className="text-xl font-bold mb-6">TOOLS</h2>
-          <div className="grid grid-cols-2 gap-4">
+        <div className="w-full lg:w-4/12">
+          <h2 className="text-lg sm:text-xl font-bold mb-6">TOOLS</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-3 sm:gap-4">
             {quickSkills.map((skill) => (
-              <div key={skill} className="flex items-center gap-2 p-3 bg-gray-800 rounded-lg">
-                
-                <span className="text-md font-semibold text-purple-300">{skill}</span>
+              <div 
+                key={skill} 
+                className="flex items-center gap-2 p-2 sm:p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                <span className="text-sm sm:text-md font-semibold text-purple-300">{skill}</span>
               </div>
             ))}
           </div>
@@ -139,4 +140,3 @@ export default function SkillsSection() {
     </section>
   )
 }
-
