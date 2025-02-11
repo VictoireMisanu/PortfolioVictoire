@@ -1,6 +1,6 @@
 import { Mail } from 'lucide-react'
-// import React, { useState } from 'react'
 import emailjs from "@emailjs/browser"
+import { useState } from 'react'
 
 export const Section6: React.FC<{}> = () => {
 
@@ -8,10 +8,22 @@ export const Section6: React.FC<{}> = () => {
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
     const publicKey = import.meta.env.VITE_PUBLIC_KEY
 
-    
+    const  [userName, setUserName] = useState('');
+  const [emailAddress, setEmailAddress] = useState('');
+  const [message, setMessage] = useState('');
 
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUserName(e.target.value);
+  };
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmailAddress(e.target.value);
+  };
+
+  const handleMessageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setMessage(e.target.value);
+  };
     const handleSendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-        // const [error, setError] = useState<string | null>(null);
         e.preventDefault()
         emailjs.sendForm(serviceId, templateId, e.target as HTMLFormElement, publicKey)
 
@@ -24,6 +36,10 @@ export const Section6: React.FC<{}> = () => {
             }
         );
         
+        setUserName('');
+        setEmailAddress('');
+        setMessage('');
+
     }
     return (
         <div id="writeUs" className=" w-full h-auto flex flex-col px-6 pt-12">
@@ -39,13 +55,13 @@ export const Section6: React.FC<{}> = () => {
                     <p className='text-sm md:lg:text-xl -mt-8'>I'm available to work with you together on your idea project.</p>
                     <div id="content" className='h-auto flex flex-col gap-5'>
                         <div id='userName'>
-                            <input className='bg-transparent border-b-[1px] border-black w-full h-12 p-5 outline-none' placeholder='Your name' type="text" name='userName'/>
+                            <input className='bg-transparent border-b-[1px] border-black w-full h-12 p-5 outline-none' placeholder='Your name' type="text" name='userName' value={userName} onChange={handleNameChange}/>
                         </div>
                         <div id='emailAddress'>
-                            <input className='bg-transparent border-b-[1px] border-black w-full h-12 p-5 outline-none' placeholder='Your email address' type="email" name='emailAddress'/>
+                            <input className='bg-transparent border-b-[1px] border-black w-full h-12 p-5 outline-none' placeholder='Your email address' type="email" name='emailAddress' value={emailAddress} onChange={handleEmailChange}/>
                         </div>
                         <div id='message'>
-                            <input className='bg-transparent border-b-[1px] border-black w-full h-12 p-5 outline-none' placeholder='Your message'  type="text" name='message'/>
+                            <input className='bg-transparent border-b-[1px] border-black w-full h-12 p-5 outline-none' placeholder='Your message'  type="text" name='message'value={message} onChange={handleMessageChange}/>
                         </div>
                         <input className='bg-purple-950 w-full h-12 text-white font-bold hover:cursor-pointer hover:text-purple-950 hover:border-purple-950 border-2 hover:bg-transparent hover:shadow-lg rounded-xl shadow-black' type="submit" value="Send" />
                                             
