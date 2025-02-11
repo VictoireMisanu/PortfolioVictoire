@@ -27,15 +27,16 @@ export const Section6: React.FC<{}> = () => {
     }
     return (
         <div id="writeUs" className=" w-full h-auto flex flex-col px-6 pt-12">
-            <div className="flex items-center gap-5 ">
+            <div className="flex items-center gap-3 sm:gap-5 mb-8 sm:mb-12">
                 <div className="bg-gray-900 p-1.5 rounded-full">
-                    <Mail className="w-12 h-12 text-white" />
+                    <Mail className="w-8 sm:w-12 h-8 sm:h-12 text-white" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900">Contact me</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Contact me</h2>
             </div>
             <div id="content" className="w-full h-auto flex flex-row gap-20 items-center justify-center">
-                <form className="w-1/2 h-full p-10 flex flex-col gap-10" onSubmit={handleSendEmail}>
-                    <p className='text-xl'>Let's keep in touch. I'm available to work with you together on your idea project</p>
+                <form className="w-full lg:md:w-1/2 h-full p-10 flex flex-col gap-10" onSubmit={handleSendEmail}>
+                    <p className='text-sm md:lg:text-xl'>Let's keep in touch.</p>
+                    <p className='text-sm md:lg:text-xl -mt-8'>I'm available to work with you together on your idea project.</p>
                     <div id="content" className='h-auto flex flex-col gap-5'>
                         <div id='userName'>
                             <input className='bg-transparent border-b-[1px] border-black w-full h-12 p-5 outline-none' placeholder='Your name' type="text" name='userName'/>
