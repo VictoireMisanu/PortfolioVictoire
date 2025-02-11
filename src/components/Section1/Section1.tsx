@@ -22,7 +22,7 @@ function Presentation() {
     return(
         <section id="home" className="bg-bg1 bg-cover bg-center flex justify-center items-center h-auto lg:md:h-screen w-full">
             <div className="w-full h-full bg-black bg-opacity-75">
-                <Header className='w-full h-20 flex justify-between items-center px-4 md:px-10 fixed bg-black/20 shadow-b-black'/>
+                <Header className='w-full h-20 flex justify-between items-center px-4 md:px-10 fixed bg-black/70 shadow-b-black'/>
                 
                 <div id="middle" className="flex flex-col-reverse mt-20 lg:md:mt-0 lg:flex-row justify-center items-center gap-8 lg:gap-20 h-full w-full py-20 px-4 md:px-6 lg:px-10">
                     {/* Partie texte */}
