@@ -38,7 +38,7 @@ function Presentation() {
                         </div>
                         
                         {/* Boutons */}
-                        <div id="btnSection" className="px-4 lg:pl-10 flex flex-row sm:flex-row gap-4 sm:gap-10 mt-6">
+                        <div id="btnSection" className="px-4 lg:pl-10 flex flex-col sm:flex-row gap-4 sm:gap-10 mt-6">
                             <Link 
                                 to={`/`} 
                                 onClick={() => scrollToSection("project")} 
