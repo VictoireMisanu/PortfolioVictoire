@@ -24,7 +24,7 @@ function Presentation(){
     return(
         <section id="home" className="bg-bg1 bg-cover bg-center flex justify-center items-center h-screen w-full">
             <div className="w-full h-full bg-black bg-opacity-75">
-                <Header className='hidden w-full h-20 lg:visible lg:flex justify-between items-center px-10 fixed bg-black/20 shadow-b-black'/>
+                <Header className='w-full h-20  flex  lg:visible justify-between items-center px-10 fixed bg-black/20 shadow-b-black'/>
                 <div id="middle" className="flex flex-row justify-center items-center gap-20 h-full w-full py-20">
                     <div id="part1" className="w-1/2 h-auto flex flex-col -mt-10">
                         <div id="text" className="p-10 w-92">
