@@ -1,22 +1,59 @@
-// import { useState } from 'react'
-import Section1 from './components/Section1/Section1'
-import Section2 from './components/Section2/Section2'
-import Section3 from './components/Section3/Section3'
-// import Section4 from './components/Section4/Section4'
+"use client"
+
+import { useEffect } from "react"
+import { BrowserRouter, useLocation } from "react-router-dom"
+import Section1 from "./components/Section1/Section1"
+import Section2 from "./components/Section2/Section2"
+import Section3 from "./components/Section3/Section3"
+import Section4 from "./components/Section4/Section4"
 
 
-function App() {
-  
+function ScrollToSection() {
+  const { hash } = useLocation()
 
+  useEffect(() => {
+    if (hash) {
+      const id = hash.replace("#", "")
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+  }, [hash])
+
+  return null
+}
+
+function MainContent() {
   return (
     <>
-    <Section1/>
-    <Section2/>
-    <Section3/>
-    {/* <Section4/> */}
-
+  
+      <main>
+        <section id="home">
+          <Section1 />
+        </section>
+        <section id="about">
+          <Section2 />
+        </section>
+        <section id="resume">
+          <Section3 />
+        </section>
+        <section id="contact">
+          <Section4 />
+        </section>
+      </main>
+      <ScrollToSection />
     </>
   )
 }
 
+function App() {
+  return (
+    <BrowserRouter>
+      <MainContent />
+    </BrowserRouter>
+  )
+}
+
 export default App
+

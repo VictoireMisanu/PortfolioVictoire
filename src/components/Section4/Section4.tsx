@@ -1,17 +1,15 @@
-interface Props {
-    
-    children: JSX.Element | JSX.Element[]
-  }
+import { Briefcase} from "lucide-react"
 
-function Section4({children}:Props){
-    return(
-        <div className="h-[40rem] w-full lg:h-0 pt-[70rem] lg:pt-44">
-            <div className="flex justify-center items-center flex-col">
-                {children}
+
+export default function Section4() {
+    return (
+        <div id="project" className="p-10">
+            <div className="flex items-center gap-5">
+                <div className="bg-gray-900 p-1.5 rounded-full">
+                    <Briefcase className="w-12 h-12 text-white" />
+                </div>
+                <h2 className="text-3xl font-bold text-gray-900">Projects</h2>
             </div>
-            
         </div>
     )
 }
-
-export default Section4

@@ -52,7 +52,7 @@ export default function SkillsSection() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-8">
+    <section id="resume" className="min-h-screen bg-gray-900 text-white p-8">
       <div className="max-w-7xl mx-auto flex flex-row gap-16">
         {/* Software Skills Column */}
         <div id="software" className="space-y-6 w-4/12">
@@ -136,7 +136,7 @@ export default function SkillsSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

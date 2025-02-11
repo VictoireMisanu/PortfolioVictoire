@@ -21,10 +21,10 @@ export default function AboutSection() {
   ]
 
   return (
-    <section className=" mx-auto py-12 px-20 bg-slate-200">
+    <section id="about" className=" mx-auto py-12 px-20 bg-slate-200">
       <div className=" flex flex-row items-center justify-center gap-20">
-        {/* Header */}
-        <div id="about" className="flex flex-col items-center gap-10 w-1/2">
+    
+        <div  className="flex flex-col items-center gap-10 w-1/2">
             <div className="flex gap-5">
                 <div className="bg-gray-900 p-1.5 rounded-full">
                     <User className="w-5 h-5 text-white" />
