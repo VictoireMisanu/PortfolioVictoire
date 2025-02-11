@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     title: "Les journées informatiques",
     description: "Full stack development using Express.js and Ejs.",
-    imageUrl: "/images/Ji.jpg",
+    imageUrl: "/images/Ji.png",
     technologies: [
       { name: "Full stack", className: "bg-blue-100 text-blue-700" },
       { name: "PERN", className: "bg-yellow-100 text-yellow-700" },

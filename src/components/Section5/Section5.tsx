@@ -5,7 +5,7 @@ import ProjectCard from "./projectCard"
 
 export default function Section5() {
     return (
-        <div id="project" className="px-6 pt-12 bg-slate-900/30">
+        <div id="project" className="px-6 py-12 bg-slate-900/30">
             <div className="flex items-center gap-5 mb-16">
                 <div className="bg-gray-900 p-1.5 rounded-full">
                     <Briefcase className="w-12 h-12 text-white" />

@@ -1,15 +1,15 @@
-interface Props {
-    className?:string;
-    children: JSX.Element | JSX.Element[]
-  }
+import { Github, Linkedin, Mail } from "lucide-react"
+import { Link } from "react-router-dom"
 
-function Footer({children}:Props){
+function Footer(){
     return(
-        <div className="lg:h-[20rem] w-full bg-slate-950 mt-[30rem] lg:pt-0 py-10 lg:py-20 lg:px-32">
-            <div className="flex flex-col gap-10 justify-center items-center lg:flex-row lg:justify-around lg:gap-0">
-                {children}
+        <div className="w-full self-stretch py-10 px-6 flex flex-col justify-center items-center">
+            <p className="w-full text-black text-md font-bold font-['Libre Baskerville'] text-center border-t-[1px] border-purple-950 pt-10 pb-4">Copyright © 2025 | Victoire Muvumbi</p>
+            <div className="w-1/4 flex justify-center items-center gap-5">
+                    <Link to={`https://github.com/VictoireMisanu`}><Github className="w-6 h-6 text-slate-600"/></Link>
+                    <Link to={`https://www.linkedin.com/in/victoire-muvumbi-203680309/`}><Linkedin className="w-6 h-6 text-slate-600"/></Link>
+                    <Link to={`mailto:vicmisanu63@gmail.com`}><Mail className="w-6 h-6 text-slate-600"/></Link>
             </div>
-            
         </div>
     )
 }
