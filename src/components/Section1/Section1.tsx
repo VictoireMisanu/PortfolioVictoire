@@ -1,8 +1,26 @@
 import Header from "../Header/Header"
 import { Briefcase, Mail } from "lucide-react"
+import { Link, useNavigate } from "react-router-dom"
+import { useCallback } from "react"
 
 
 function Presentation(){
+
+    const navigate = useNavigate()
+      
+    const scrollToSection = useCallback(
+      (sectionId: string) => {
+        navigate("/") // Assurez-vous d'être sur la bonne page
+        setTimeout(() => {
+          const element = document.getElementById(sectionId)
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" })
+          }
+        }, 100) // Petit délai pour s'assurer que la navigation est terminée
+      },
+      [navigate],
+    )
+
     return(
         <section id="home" className="bg-bg1 bg-cover bg-center flex justify-center items-center h-screen w-full">
             <div className="w-full h-full bg-black bg-opacity-75">
@@ -15,8 +33,8 @@ function Presentation(){
                                 responsive websites and applications that are easy to use and beautiful to look</p>
                         </div>
                         <div id="btnSection" className="pl-10 flex flex-row gap-10">
-                            <button className="w-auto bg-black rounded-xl border-white border-[1px] cursor-pointer p-3 flex flex-row items-center justify-center gap-3"><Briefcase className="w-5 h-5 text-white" /><span className=' text-slate-300 font-normal text-xl '>View my work</span></button>
-                            <button className="w-auto bg-blue-700 shadow-xl shadow-black rounded-xl cursor-pointer p-3 flex flex-row items-center justify-center gap-3"><Mail className="w-5 h-5 text-white"/><span className=' text-slate-300 font-normal text-xl '>Message me</span></button>
+                            <Link to={`/`} onClick={() => scrollToSection("project")} className="w-auto bg-black rounded-xl border-white border-[1px] cursor-pointer p-3 flex flex-row items-center justify-center gap-3"><Briefcase className="w-5 h-5 text-white" /><span className=' text-slate-300 font-normal text-xl '>View my work</span></Link>
+                            <Link to={`/`} onClick={() => scrollToSection("contact")} className="w-auto bg-blue-700 shadow-xl shadow-black rounded-xl cursor-pointer p-3 flex flex-row items-center justify-center gap-3"><Mail className="w-5 h-5 text-white"/><span className=' text-slate-300 font-normal text-xl '>Message me</span></Link>
                         </div>
                     </div>
                     <div id="picture" className=" w-auto h-auto flex items-center justify-center">

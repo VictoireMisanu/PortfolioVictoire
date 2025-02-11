@@ -47,7 +47,7 @@ function MainContent() {
         <section id="project">
           <Section5 />
         </section>
-        <section id="message">
+        <section id="contact">
           <Section6 />
         </section>
       </main>
