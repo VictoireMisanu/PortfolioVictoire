@@ -63,7 +63,7 @@ export const Section6: React.FC<{}> = () => {
                         <div id='message'>
                             <input className='bg-transparent border-b-[1px] border-black w-full h-12 p-5 outline-none' placeholder='Your message'  type="text" name='message'value={message} onChange={handleMessageChange}/>
                         </div>
-                        <input className='bg-purple-950 w-full h-12 text-white font-bold hover:cursor-pointer hover:text-purple-950 hover:border-purple-950 border-2 hover:bg-transparent hover:shadow-lg rounded-xl shadow-black' type="submit" value="Send" />
+                        <input className='bg-blue-950 w-full h-12 text-white font-bold hover:cursor-pointer hover:text-blue-950 hover:border-blue-950 border-2 hover:bg-transparent hover:shadow-lg rounded-xl shadow-black' type="submit" value="Send" />
                                             
                     </div>
                 </form>

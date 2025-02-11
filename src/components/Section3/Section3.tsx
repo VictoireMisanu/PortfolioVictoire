@@ -1,19 +1,9 @@
 "use client"
 
-import { motion } from "framer-motion"
+// import { motion } from "framer-motion"
 
 export default function SkillsSection() {
-  const softwareSkills = [
-    { name: "HTML/CSS", level: 90 },
-    { name: "JavaScript", level: 70 },
-    { name: "TypeScript", level: 60 },
-    { name: "Node.js", level: 60 },
-    { name: "ReactJS", level: 75 },
-    { name: "TailwindCSS", level: 75 },
-    { name: "ExpressJS", level: 50 },
-    { name: "AdonisJS", level: 60 },
-    { name: "SQL", level: 70 },
-  ]
+
 
   const experiences = [
     {
@@ -42,13 +32,10 @@ export default function SkillsSection() {
     },
   ]
 
+  const softwareSkills = ["HTML/CSS", "Javascript", "Typescript", "Node.js", "React.js", "TailwindCSS", "ExprssJS", "AdonisJS", "SQL"]
   const quickSkills = ["VSCode", "PostgreSQL", "SQLServer", "WampServer", "Git", "Draw.io", "Figma", "Canva"]
 
-  const languages = [
-    { name: "English", level: 80 },
-    { name: "French", level: 90 },
-    { name: "Lingala", level: 90 },
-  ]
+  const languages = ["English", "French", "Lingala", "Swahili"]
 
   return (
     <section id="resume" className="min-h-screen bg-gray-900 text-white px-4 sm:px-6 py-8 sm:py-12">
@@ -56,51 +43,34 @@ export default function SkillsSection() {
         {/* Software Skills Column */}
         <div id="software" className="space-y-6 w-full lg:w-4/12">
           <h2 className="text-lg sm:text-xl font-bold mb-4">SOFTWARE SKILLS</h2>
-          <div className="space-y-4">
-            {softwareSkills.map((skill) => (
-              <div key={skill.name} className="space-y-2">
-                <div className="flex justify-between text-sm">
-                  <span>{skill.name}</span>
-                  <span>{skill.level}%</span>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-3 sm:gap-4">
+              {softwareSkills.map((skills) => (
+                <div 
+                  key={skills}
+                  className="flex items-center gap-2 p-2 sm:p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+                >
+                  <span className="text-sm sm:text-md font-semibold text-blue-300">{skills}</span>
                 </div>
-                <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                    className="h-full bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
           {/* Languages Section */}
-          <div id="language" className="mt-8">
-            <h2 className="text-lg sm:text-xl font-bold mb-4">LANGUAGES</h2>
-            <div className="space-y-4">
+          <div className="w-full lg:w-4/12">
+            <h2 className="text-lg sm:text-xl font-bold mb-6">LANGUAGES</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-3 sm:gap-4">
               {languages.map((language) => (
-                <div key={language.name} className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span>{language.name}</span>
-                    <span>{language.level}%</span>
-                  </div>
-                  <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${language.level}%` }}
-                      transition={{ duration: 1, ease: "easeOut" }}
-                      className="h-full bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"
-                    />
-                  </div>
+                <div 
+                  key={language}
+                  className="w-20 flex items-center gap-5 p-2 sm:p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+                >
+                  <span className="text-sm sm:text-md font-semibold text-blue-300">{language}</span>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Experience Column */}
-        <div className="w-full lg:w-4/12">
+        <div id="experience" className="w-full lg:w-4/12">
           <h2 className="text-lg sm:text-xl font-bold mb-6">EXPERIENCE</h2>
           <div className="space-y-8">
             {experiences.map((exp, index) => (
@@ -122,8 +92,8 @@ export default function SkillsSection() {
           </div>
         </div>
 
-        {/* Tools Column */}
-        <div className="w-full lg:w-4/12">
+        
+        <div id="tools" className="w-full lg:w-4/12">
           <h2 className="text-lg sm:text-xl font-bold mb-6">TOOLS</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-3 sm:gap-4">
             {quickSkills.map((skill) => (

@@ -60,7 +60,7 @@ function Header({ className }: Props) {
                 {/* Bouton Menu Mobile */}
                 <button 
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="lg:hidden z-20 p-2 hover:bg-purple-500/30 rounded-md transition-colors"
+                    className="lg:hidden z-20 p-2 hover:bg-blue-500/30 rounded-md transition-colors"
                     aria-label="Toggle menu"
                 >
                     {isMenuOpen ? (
@@ -81,7 +81,7 @@ function Header({ className }: Props) {
                             <Link 
                                 to="/" 
                                 onClick={() => scrollToSection("home")}
-                                className="block px-4 py-2 hover:bg-purple-500/30 transition-colors"
+                                className="block px-4 py-2 hover:bg-blue-500/30 transition-colors"
                             >
                                 Home
                             </Link>
@@ -90,7 +90,7 @@ function Header({ className }: Props) {
                             <Link 
                                 to="/" 
                                 onClick={() => scrollToSection("about")}
-                                className="block px-4 py-2 hover:bg-purple-500/30 transition-colors"
+                                className="block px-4 py-2 hover:bg-blue-500/30 transition-colors"
                             >
                                 About
                             </Link>
@@ -99,7 +99,7 @@ function Header({ className }: Props) {
                             <Link 
                                 to="/" 
                                 onClick={() => scrollToSection("resume")}
-                                className="block px-4 py-2 hover:bg-purple-500/30 transition-colors"
+                                className="block px-4 py-2 hover:bg-blue-500/30 transition-colors"
                             >
                                 Resume
                             </Link>
@@ -108,7 +108,7 @@ function Header({ className }: Props) {
                             <Link 
                                 to="/" 
                                 onClick={() => scrollToSection("education")}
-                                className="block px-4 py-2 hover:bg-purple-500/30 transition-colors"
+                                className="block px-4 py-2 hover:bg-blue-500/30 transition-colors"
                             >
                                 Education
                             </Link>
@@ -117,7 +117,7 @@ function Header({ className }: Props) {
                             <Link 
                                 to="/" 
                                 onClick={() => scrollToSection("project")}
-                                className="block px-4 py-2 hover:bg-purple-500/30 transition-colors"
+                                className="block px-4 py-2 hover:bg-blue-500/30 transition-colors"
                             >
                                 Projects
                             </Link>
@@ -126,7 +126,7 @@ function Header({ className }: Props) {
                             <Link 
                                 to="/" 
                                 onClick={() => scrollToSection("contact")}
-                                className="block px-4 py-2 hover:bg-purple-500/30 transition-colors"
+                                className="block px-4 py-2 hover:bg-blue-500/30 transition-colors"
                             >
                                 Contact me
                             </Link>
