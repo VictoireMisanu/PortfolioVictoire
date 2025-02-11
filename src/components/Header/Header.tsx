@@ -32,24 +32,24 @@ function Header({ className }: Props) {
                 <h2 className="font-bold text-xl text-purple-800 z-20">Victoire Muvumbi.dev</h2>
 
                 {/* Menu Desktop */}
-                <div className="hidden lg:block">
+                <div className="hidden lg:md:block">
                     <ul className="flex items-center space-x-8">
-                        <li className="px-2 rounded-md hover:bg-purple-500/30 transition-colors">
+                        <li className="p-3 text-white rounded-md hover:bg-purple-500/30 transition-colors">
                             <Link to="/" onClick={() => scrollToSection("home")}>Home</Link>
                         </li>
-                        <li className="px-2 rounded-md hover:bg-purple-500/30 transition-colors">
+                        <li className="p-3 text-white rounded-md hover:bg-purple-500/30 transition-colors">
                             <Link to="/" onClick={() => scrollToSection("about")}>About</Link>
                         </li>
-                        <li className="px-2 rounded-md hover:bg-purple-500/30 transition-colors">
+                        <li className="p-3 text-white rounded-md hover:bg-purple-500/30 transition-colors">
                             <Link to="/" onClick={() => scrollToSection("resume")}>Resume</Link>
                         </li>
-                        <li className="px-2 rounded-md hover:bg-purple-500/30 transition-colors">
+                        <li className="p-3 text-white rounded-md hover:bg-purple-500/30 transition-colors">
                             <Link to="/" onClick={() => scrollToSection("education")}>Education</Link>
                         </li>
-                        <li className="px-2 rounded-md hover:bg-purple-500/30 transition-colors">
+                        <li className="p-3 text-white rounded-md hover:bg-purple-500/30 transition-colors">
                             <Link to="/" onClick={() => scrollToSection("project")}>Projects</Link>
                         </li>
-                        <li className="px-2 rounded-md hover:bg-purple-500/30 transition-colors">
+                        <li className="p-3 rounded-md hover:bg-purple-500/30 text-white transition-colors">
                             <Link to="/" onClick={() => scrollToSection("contact")}>Contact me</Link>
                         </li>
                     </ul>
