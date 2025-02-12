@@ -29,7 +29,7 @@ function Presentation() {
                     <div id="part1" className="w-full lg:w-1/2 h-auto flex flex-col lg:mt-0">
                         <div id="text" className="p-4 lg:p-10 w-full lg:w-92">
                             <div className="text-2xl lg:text-3xl text-slate-300 mb-4">
-                                Hello, I'm <span className="text-blue-700 font-sans text-4xl font-extrabold">Victoire Muvumbi</span>
+                                Hello, I'm <span className="text-blue-700 font-sans text-2xl lg:md:text-4xl font-extrabold">Victoire Muvumbi</span>
                             </div>
                             <p className="text-lg lg:text-xl text-slate-300 text-justify">
                                 I'm a full stack developer with a passion for design. I specialize in creating fast,
