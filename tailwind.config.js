@@ -7,9 +7,10 @@ export default {
   theme: {
     extend: {
       backgroundImage:{
-        'bg1':"url('/bg1.jpg')",
-        'bg2':"url('/screen.png')",
-        'bg3':"url('/banner3.png')",
+        'bg':"url('/images/bg1.jpg')",
+        'profilePic1':"url('images/VicPasseport1.png')",
+        'profilePic2':"url('images/VicPasseport2.png')"
+
         
       }
     },

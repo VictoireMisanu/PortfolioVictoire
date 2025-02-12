@@ -20,7 +20,7 @@ function Presentation() {
     )
 
     return(
-        <section id="home" className="bg-bg1 bg-cover bg-center flex justify-center items-center h-auto lg:md:h-screen w-full">
+        <section id="home" className="bg-bg bg-cover bg-center flex justify-center items-center h-auto lg:md:h-screen w-full">
             <div className="w-full h-full bg-black bg-opacity-75">
                 <Header className='w-full h-20 flex justify-between items-center px-4 md:px-10 fixed bg-black/70 shadow-b-black'/>
                 
@@ -61,9 +61,9 @@ function Presentation() {
                     {/* Image */}
                     <div id="picture" className="w-full lg:w-auto h-auto flex items-center justify-center mt-8 lg:mt-0">
                         <img 
-                            src="/images/Vic1.png" 
+                            src="/images/VicPasseport2.png" 
                             alt="Victoire Muvumbi" 
-                            className="bg-black/70 w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 border-[1px] rounded-full border-white p-6 lg:p-10 mb-5 transition-transform hover:scale-105 duration-300" 
+                            className="bg-black/70 w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 border-[3px] rounded-full border-white shadow-black shadow-md mb-5 transition-transform hover:scale-105 duration-300" 
                         />
                     </div>
                 </div>
