@@ -28,9 +28,9 @@ function Presentation() {
                     {/* Partie texte */}
                     <div id="part1" className="w-full lg:w-1/2 h-auto flex flex-col lg:mt-0">
                         <div id="text" className="p-4 lg:p-10 w-full lg:w-92">
-                            <h1 className="text-2xl lg:text-3xl text-slate-300 font-bold mb-4">
-                                Hello, I'm <span className="text-blue-700">Victoire Muvumbi</span>
-                            </h1>
+                            <div className="text-2xl lg:text-3xl text-slate-300 mb-4">
+                                Hello, I'm <span className="text-blue-700 font-sans text-4xl font-extrabold">Victoire Muvumbi</span>
+                            </div>
                             <p className="text-lg lg:text-xl text-slate-300 text-justify">
                                 I'm a full stack developer with a passion for design. I specialize in creating fast,
                                 responsive websites and applications that are easy to use and beautiful to look
@@ -42,7 +42,7 @@ function Presentation() {
                             <Link 
                                 to={`/`} 
                                 onClick={() => scrollToSection("project")} 
-                                className="w-full sm:w-auto bg-black rounded-xl border-white border-[1px] cursor-pointer p-3 flex flex-row items-center justify-center gap-3 hover:bg-black/70 transition-colors"
+                                className="w-full sm:w-auto bg-black rounded-xl border-white border-[1px] cursor-pointer py-3 px-5 flex flex-row items-center justify-center gap-3 hover:bg-black/70 transition-colors"
                             >
                                 <Briefcase className="w-5 h-5 text-white" />
                                 <span className='text-slate-300 font-normal text-lg lg:text-xl'>View my work</span>
@@ -50,7 +50,7 @@ function Presentation() {
                             <Link 
                                 to={`/`} 
                                 onClick={() => scrollToSection("contact")} 
-                                className="w-full sm:w-auto bg-blue-700 shadow-xl shadow-black rounded-xl cursor-pointer p-3 flex flex-row items-center justify-center gap-3 hover:bg-blue-800 transition-colors"
+                                className="w-full sm:w-auto bg-blue-700 shadow-xl shadow-black rounded-xl cursor-pointer py-3 px-5 flex flex-row items-center justify-center gap-3 hover:bg-blue-800 transition-colors"
                             >
                                 <Mail className="w-5 h-5 text-white"/>
                                 <span className='text-slate-300 font-normal text-lg lg:text-xl'>Message me</span>

@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom"
 import { useCallback, useState } from "react"
-import { ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
+import {  Menu, X } from "lucide-react";
 
 interface Props {
     className: string;
@@ -30,7 +30,7 @@ function Header({ className }: Props) {
             <div className="container mx-auto px-4 py-4 flex items-center justify-between">
                 {/* Logo */}
                 <div id="name" className="flex items-center justify-center">
-                  <ChevronLeft className="w-12 h-12 text-blue-800 -mr-2"/><h2 className="font-bold text-xl text-blue-800">VM</h2><ChevronRight className="w-12 h-12 text-blue-800 -ml-2"/>
+                  <h2 className="font-bold text-xl text-blue-800">Victoire Muvumbi.dev</h2>
                 </div>
 
                 {/* Menu Desktop */}

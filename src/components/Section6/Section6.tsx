@@ -20,7 +20,7 @@ export const Section6: React.FC<{}> = () => {
     setEmailAddress(e.target.value);
   };
 
-  const handleMessageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setMessage(e.target.value);
   };
     const handleSendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -55,13 +55,13 @@ export const Section6: React.FC<{}> = () => {
                     <p className='text-sm md:lg:text-xl -mt-8'>I'm available to work with you together on your idea project.</p>
                     <div id="content" className='h-auto flex flex-col gap-5'>
                         <div id='userName'>
-                            <input className='bg-transparent border-b-[1px] border-black w-full h-12 p-5 outline-none' placeholder='Your name' type="text" name='userName' value={userName} onChange={handleNameChange}/>
+                            <input className='bg-black/30 w-full h-12 p-5 outline-none rounded-md text-white font-normal text-xl placeholder:text-white' placeholder='Your name' type="text" name='userName' value={userName} onChange={handleNameChange}/>
                         </div>
                         <div id='emailAddress'>
-                            <input className='bg-transparent border-b-[1px] border-black w-full h-12 p-5 outline-none' placeholder='Your email address' type="email" name='emailAddress' value={emailAddress} onChange={handleEmailChange}/>
+                            <input className='bg-black/30 w-full h-12 p-5 outline-none rounded-md text-white font-normal text-xl placeholder:text-white' placeholder='Your email address' type="email" name='emailAddress' value={emailAddress} onChange={handleEmailChange}/>
                         </div>
                         <div id='message'>
-                            <input className='bg-transparent border-b-[1px] border-black w-full h-12 p-5 outline-none' placeholder='Your message'  type="text" name='message'value={message} onChange={handleMessageChange}/>
+                            <textarea className='bg-black/30 w-full h-44 p-5 outline-none rounded-md text-white font-normal text-xl placeholder:text-white' placeholder='Your message' name='message'value={message} onChange={handleMessageChange}/>
                         </div>
                         <input className='bg-blue-950 w-full h-12 text-white font-bold hover:cursor-pointer hover:text-blue-950 hover:border-blue-950 border-2 hover:bg-transparent hover:shadow-lg rounded-xl shadow-black' type="submit" value="Send" />
                                             
