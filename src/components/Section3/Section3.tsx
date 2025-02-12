@@ -57,7 +57,7 @@ export default function SkillsSection() {
           {/* Languages Section */}
           <div className="w-full lg:w-4/12">
             <h2 className="text-lg sm:text-xl font-bold mb-6">LANGUAGES</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-3 sm:gap-4">
+            <div className="flex gap-2 lg:md:gap-3">
               {languages.map((language) => (
                 <div 
                   key={language}
