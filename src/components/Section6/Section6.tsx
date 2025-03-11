@@ -1,6 +1,6 @@
 import { Mail } from 'lucide-react'
 import emailjs from "@emailjs/browser"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export const Section6 = () => {
 
@@ -12,6 +12,18 @@ export const Section6 = () => {
     const [emailAddress, setEmailAddress] = useState('');
     const [message, setMessage] = useState('');
     const [showPopup, setShowPopup] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
+    const [isFormValid, setIsFormValid] = useState(false);
+
+    useEffect(() => {
+        if (userName && emailAddress && message) {
+            setIsFormValid(true);
+            setErrorMessage('');
+        } else {
+            setIsFormValid(false);
+            setErrorMessage('Tous les champs doivent être remplis.');
+        }
+    }, [userName, emailAddress, message]);
 
     const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setUserName(e.target.value);
@@ -27,6 +39,10 @@ export const Section6 = () => {
 
     const handleSendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        if (!isFormValid) {
+            setErrorMessage('Tous les champs doivent être remplis.');
+            return;
+        }
         emailjs.sendForm(serviceId, templateId, e.target as HTMLFormElement, publicKey)
             .then(
                 (result) => {
@@ -65,14 +81,15 @@ export const Section6 = () => {
                         <div id='message'>
                             <textarea className='bg-black/10 w-full h-44 p-5 outline-none rounded-md text-black font-normal text-md lg:md:text-xl placeholder:text-slate-900' placeholder='Your message' name='message' value={message} onChange={handleMessageChange}/>
                         </div>
-                        <input className='bg-blue-950 w-full h-12 text-white font-bold hover:cursor-pointer hover:text-blue-950 hover:border-blue-950 border-2 hover:bg-transparent hover:shadow-lg rounded-xl shadow-black' type="submit" value="Send" />
+                        {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+                        <input className={`bg-blue-950 w-full h-12 text-white font-bold hover:cursor-pointer hover:text-blue-950 hover:border-blue-950 border-2 hover:bg-transparent hover:shadow-lg rounded-xl shadow-black ${!isFormValid ? 'opacity-50 cursor-not-allowed' : ''}`} type="submit" value="Send" disabled={!isFormValid} />
                     </div>
                 </form>
             </div>
             {showPopup && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <div className="bg-white p-6 rounded-md shadow-md">
-                        <h2 className="text-xl font-bold mb-4">Message sent successfully</h2>
+                        <h2 className="text-xl font-bold mb-4">Message envoyé avec succès</h2>
                         <button className="bg-blue-950 text-white px-4 py-2 rounded-md" onClick={() => setShowPopup(false)}>Fermer</button>
                     </div>
                 </div>
