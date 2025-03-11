@@ -15,15 +15,26 @@ export const Section6 = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const [isFormValid, setIsFormValid] = useState(false);
 
-    useEffect(() => {
-        if (userName && emailAddress && message) {
+    const validateForm = () => {
+        if (!userName || !emailAddress || !message) {
+            setIsFormValid(false);
+            setErrorMessage('All fields are required.');
+        } else if (!validateEmail(emailAddress)) {
+            setIsFormValid(false);
+            setErrorMessage('Enter a valid email please.');
+        } else {
             setIsFormValid(true);
             setErrorMessage('');
-        } else {
-            setIsFormValid(false);
-            setErrorMessage('Tous les champs doivent être remplis.');
         }
-    }, [userName, emailAddress, message]);
+    };
+
+    useEffect(() => {
+        validateForm();}, [userName, emailAddress, message]);
+    
+    const validateEmail = (email: string) => {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    };
 
     const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setUserName(e.target.value);
@@ -40,7 +51,6 @@ export const Section6 = () => {
     const handleSendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!isFormValid) {
-            setErrorMessage('Tous les champs doivent être remplis.');
             return;
         }
         emailjs.sendForm(serviceId, templateId, e.target as HTMLFormElement, publicKey)
