@@ -19,7 +19,7 @@ function Header({ className }: Props) {
             element.scrollIntoView({ behavior: "smooth" })
           }
           setIsMenuOpen(false); // Ferme le menu après la navigation
-        }, 100) // Petit délai pour s'assurer que la navigation est terminée
+        }, 100) 
       },
       [navigate],
     )
@@ -30,7 +30,7 @@ function Header({ className }: Props) {
             <div className="container mx-auto px-4 py-4 flex items-center justify-between">
                 {/* Logo */}
                 <div id="name" className="flex items-center justify-center">
-                  <h2 className="font-bold text-xl text-blue-800">Victoire Muvumbi.dev</h2>
+                  <h2 className="font-bold text-xl text-blue-500">Victoire Muvumbi.dev</h2>
                 </div>
 
                 {/* Menu Desktop */}

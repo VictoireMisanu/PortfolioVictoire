@@ -7,6 +7,8 @@ export interface Technology {
     title: string
     description: string
     imageUrl: string
+    projectUrl: string
+    status: string
     technologies: Technology[]
   }
   
