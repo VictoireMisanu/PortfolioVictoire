@@ -101,7 +101,7 @@ export default function SkillsSection() {
                 key={skill} 
                 className="flex items-center gap-2 p-2 sm:p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
               >
-                <span className="text-sm sm:text-md font-semibold text-purple-300">{skill}</span>
+                <span className="text-sm sm:text-md font-semibold text-blue-300">{skill}</span>
               </div>
             ))}
           </div>
