@@ -50,7 +50,7 @@ function Presentation() {
                             <Link 
                                 to={`/`} 
                                 onClick={() => scrollToSection("contact")} 
-                                className="w-full sm:w-auto bg-red-700 shadow-xl shadow-black rounded-xl cursor-pointer py-3 px-5 flex flex-row items-center justify-center gap-3 hover:bg-blue-800 transition-colors"
+                                className="w-full sm:w-auto bg-blue-700 shadow-xl shadow-black rounded-xl cursor-pointer py-3 px-5 flex flex-row items-center justify-center gap-3 hover:bg-blue-800 transition-colors"
                             >
                                 <Mail className="w-5 h-5 text-white"/>
                                 <span className='text-slate-300 font-normal text-lg lg:text-xl'>Message me</span>
